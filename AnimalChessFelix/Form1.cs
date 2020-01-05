@@ -153,23 +153,23 @@ namespace AnimalChessFelix
                 {
                     if (sp[0].Equals("tiger"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\tiger.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\tiger.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                     else if (sp[0].Equals("rat"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\rat.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\rat.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                     else if (sp[0].Equals("wolf"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\wolf.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\wolf.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                     else if (sp[0].Equals("dog"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\dog.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\dog.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                     else if (sp[0].Equals("leopard"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\leopard.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\leopard.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                     else if (sp[0].Equals("lion"))
                     {
@@ -177,11 +177,11 @@ namespace AnimalChessFelix
                     }
                     else if (sp[0].Equals("elepant"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\elephant.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\elephant.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                     else if (sp[0].Equals("cat"))
                     {
-                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\cat.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\AnimalChessFelix\Image\cat.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
                     }
                 }
             }
