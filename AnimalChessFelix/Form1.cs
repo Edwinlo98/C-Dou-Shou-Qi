@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,8 @@ namespace AnimalChessFelix
         int giliran;
         int numofclick;
         int clickedy, clickedx;
+        public string modePlay;
+        ArrayList dataHewan = new ArrayList();
 
         public void goPlay()
         {
@@ -36,42 +39,50 @@ namespace AnimalChessFelix
                     if(a == 8 && b == 0)
                     {
                         pemain[a, b] = 1;
-                        hewan[a, b] = "tiger"; 
+                        hewan[a, b] = "tiger";
+                        dataHewan.Add("tiger-"+a.ToString()+"-"+b.ToString());
                     }
                     else if (a == 6 && b == 0)
                     {
                         pemain[a, b] = 2;
                         hewan[a, b] = "rat";
+                        dataHewan.Add("rat-" + a.ToString() + "-" + b.ToString());
                     }
                     else if (a == 6 && b == 2)
                     {
                         pemain[a, b] = 3;
                         hewan[a, b] = "wolf";
+                        dataHewan.Add("wolf-" + a.ToString() + "-" + b.ToString());
                     }
                     else if (a == 6 && b == 3)
                     {
                         pemain[a, b] = 4;
                         hewan[a, b] = "dog";
+                        dataHewan.Add("dog-" + a.ToString() + "-" + b.ToString());
                     }
                     else if (a == 6 && b == 5)
                     {
                         pemain[a, b] = 5;
                         hewan[a, b] = "leopard";
+                        dataHewan.Add("leopard-" + a.ToString() + "-" + b.ToString());
                     }
                     else if (a == 7 && b ==6)
                     {
                         pemain[a, b] = 6;
                         hewan[a, b] = "lion";
+                        dataHewan.Add("lion-" + a.ToString() + "-" + b.ToString());
                     }
                     else if (a == 8 && b == 1)
                     {
                         pemain[a, b] = 7;
                         hewan[a, b] = "elepant";
+                        dataHewan.Add("elepant-" + a.ToString() + "-" + b.ToString());
                     }
                     else if (a == 7 && b == 4)
                     {
                         pemain[a, b] = 8;
                         hewan[a, b] = "cat";
+                        dataHewan.Add("cat-" + a.ToString() + "-" + b.ToString());
                     }
                 }
             }
@@ -133,11 +144,55 @@ namespace AnimalChessFelix
                     }
                 }
             }
+
+            foreach (var item in dataHewan)
+            {
+                String data = item.ToString();
+                String[] sp = data.Split('-');
+                for (int i = 0; i < sp.Length; i++)
+                {
+                    if (sp[0].Equals("tiger"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\tiger.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("rat"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\rat.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("wolf"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\wolf.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("dog"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\dog.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("leopard"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\leopard.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("lion"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\lion.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("elepant"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\elephant.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                    else if (sp[0].Equals("cat"))
+                    {
+                        g.DrawImage(Image.FromFile(@"C:\Users\hp\Desktop\AnimalChessFelix\Image\cat.png"), 20 + (Convert.ToInt32(sp[2]) * 60), 20 + (Convert.ToInt32(sp[1]) * 60), 61, 61);
+                    }
+                }
+            }
         }
 
         private void changeturn()
         {
-            giliran += 1; if(giliran == 3) { giliran = 1; }
+            giliran += 1;
+            if (giliran == 3) {
+                giliran = 1;
+            }
         }
 
         private void swap(int y1, int x1, int y2, int x2)
@@ -164,8 +219,7 @@ namespace AnimalChessFelix
             else { return 0; }
         }
 
-        public bool bolehMelangkah(int tpemain1, string thewan1, int y1, int x1, int y2, int x2,
-            int tpemain2, string thewan2)
+        public bool bolehMelangkah(int tpemain1, string thewan1, int y1, int x1, int y2, int x2, int tpemain2, string thewan2)
         {
             bool boleh = false;
             int sy = Math.Abs(y1 - y2);
@@ -245,6 +299,7 @@ namespace AnimalChessFelix
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
