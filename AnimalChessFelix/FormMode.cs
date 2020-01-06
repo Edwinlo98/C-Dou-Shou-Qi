@@ -19,25 +19,28 @@ namespace AnimalChessFelix
 
         private void btnEasy_Click(object sender, EventArgs e)
         {
-            new Form1().modePlay = "Easy";
+            Form1 f = new Form1();
+            f.modePlay = "Easy";
             this.Hide();
-            new Form1().ShowDialog();
+            f.ShowDialog();
             this.Close();
         }
 
         private void btnMedium_Click(object sender, EventArgs e)
         {
-            new Form1().modePlay = "Medium";
+            Form1 f = new Form1();
+            f.modePlay = "Normal";
             this.Hide();
-            new Form1().ShowDialog();
+            f.ShowDialog();
             this.Close();
         }
 
         private void btnHard_Click(object sender, EventArgs e)
         {
-            new Form1().modePlay = "Hard";
+            Form1 f = new Form1();
+            f.modePlay = "Hard";
             this.Hide();
-            new Form1().ShowDialog();
+            f.ShowDialog();
             this.Close();
         }
     }
