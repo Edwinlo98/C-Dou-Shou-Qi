@@ -1,6 +1,6 @@
 ﻿namespace AnimalChessFelix
 {
-    partial class Form1
+    partial class FormEasy
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "0";
             // 
-            // Form1
+            // FormEasy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,8 +101,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblgiliran);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FormEasy";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);

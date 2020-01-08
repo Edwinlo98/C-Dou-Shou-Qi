@@ -19,7 +19,7 @@ namespace AnimalChessFelix
 
         private void btnEasy_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            FormEasy f = new FormEasy();
             f.modePlay = "Easy";
             this.Hide();
             f.ShowDialog();
@@ -28,8 +28,8 @@ namespace AnimalChessFelix
 
         private void btnMedium_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.modePlay = "Normal";
+            //AI Jalan duluan
+            FormMedium f = new FormMedium(1);
             this.Hide();
             f.ShowDialog();
             this.Close();
@@ -37,7 +37,7 @@ namespace AnimalChessFelix
 
         private void btnHard_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            FormEasy f = new FormEasy();
             f.modePlay = "Hard";
             this.Hide();
             f.ShowDialog();
